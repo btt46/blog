@@ -1,0 +1,20 @@
+.home {
+	display: flex;
+	flex-direction: row;
+	height: 80vh;
+	overflow: auto;
+}
+.home-left-page{
+	flex:70%;
+}
+
+.home-right-page {
+	flex: 30%;
+}
+ 
+
+@media (max-width: 800px) {
+    .home {
+      flex-direction: column;
+    }
+ }

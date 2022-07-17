@@ -1,0 +1,15 @@
+.form {
+	height: 80vh;
+	overflow: auto;
+}
+
+.contact-form {
+    margin-top: 1%;
+    margin-right: 15%;
+    margin-left: 15%;
+    padding: .5% 1% 1% 1%;
+}
+
+#contact-form-title {
+    text-align: center;
+}

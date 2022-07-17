@@ -1,0 +1,30 @@
+.profile {
+    margin: 4%;
+    display: flex;
+    flex-direction: row;
+    margin-right: 30%;
+    margin-left: 7%;
+    height: 50vh;
+}
+
+.profile-left {
+    flex: 20%;
+}
+
+.profile-right {
+    flex: 70%;
+}
+
+@media (max-width: 800px) {
+    .profile {
+      flex-direction: column;
+    }
+  }
+
+.avatar {
+    margin-top: 20%;
+}
+
+a {
+    margin-right: 7px;
+}
