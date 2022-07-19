@@ -1,9 +1,14 @@
 import './PostExceprt.css'
 import ReactMarkdown from 'react-markdown';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import Post from '../BlogPost/BlogPost';
+import { BrowserRouter as Router, Route, Routes, useNavigate} from "react-router-dom";
+
 
 function PostExceprt (props)  {
-	console.log("PostExceprt", props.data);
+ // 	console.log("PostExceprt", props.data);
+  const navigate = useNavigate();
+  let id = props.data.id;
 	let content = props.data.content;
 	let topic = props.data.topic;
 	let exceprt = props.data.exceprt;
@@ -24,10 +29,12 @@ function PostExceprt (props)  {
       </div>
       <br />
 			<p className="card__text">
-				{exceprt}....
+				{exceprt}...
 			</p>
-		  <button className="card__btn">Read more</button>
-		 </div>
+           
+        <button className="card__btn" onClick={() => {navigate("/blog/post:" +id)}}>Read more</button>
+       
+      </div>
 		</div>
 
 )}

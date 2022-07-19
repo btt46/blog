@@ -5,21 +5,21 @@ import {
   Profile,
   Home,
   Contact,
-  Footer
+  Footer,
+  BlogPost,
 } from './components';
 
 
 function App() {
   return (
     <div className="App">
-      <Router>
         <Header />
         <Routes>  
           <Route path="/blog" element={<Home />} />
           <Route path="/blog/about" element={<Profile />} />
           <Route path="/blog/contact" element={<Contact />} />
-        </Routes>
-      </Router>
+          <Route path="/blog/post:id" element={<BlogPost />} />
+      </Routes>
       <Footer />
     </div>
   );

@@ -9,11 +9,16 @@
 
 }
 
+*,
+*::before,
+*::after { 
+  box-sizing: border-box;
+}
 
 .cards {
-	displau: flex;
+	display: flex;
 	flex-wrap: wrap;
-	list-stype: none;
+	list-style: none;
 	margin: 0;
 	padding: 0;
 }
@@ -21,11 +26,14 @@
 .cards__item {
 	display: flex;
 	padding: 1rem;
-	@media(min-width: 40rem) {
-		 width: 50%;
-	}
-	@media(min-width: 56rem) {
-			width: 33.3333%;
-	}
 
+	
+}
+
+
+
+@media(min-width: 60rem) {
+	.cards__item{
+    	width: 33.3333%;
+	}
 }
