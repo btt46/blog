@@ -22,9 +22,11 @@ function PostList () {
 	let content = blogPosts[i].content;
 	let exceprt = blogPosts[i].exceprt;
   let coverImage = blogPosts[i].coverImage;
+  let createdDate =  blogPosts[i].createdDate;
   console.log(coverImage)
   postList.push(<PostExceprt data={{"topic": topic, 
-	   "content": content, "exceprt": exceprt, "coverImage" : coverImage,}} className="post-exceprt" />)
+	   "content": content, "exceprt": exceprt, "coverImage" : coverImage,
+     "createdDate": createdDate}} className="post-exceprt" />)
 	
  }
 

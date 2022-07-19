@@ -51,12 +51,17 @@
 		padding: .5rem;
 	}
 
+.card__btn:hover {
+  box-shadow: 0 3px 4px 0 rgba(0,0,0,0.24), 0 5px 15px 0 rgba(0,0,0,0.19);
+}  
+
 .btn--block {
 	display: block;
   width: 100%;
 }
 
 .card__image {
+    padding-top:25%;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -84,4 +89,9 @@ img {
    height: auto;
    max-width: 100%;
    vertical-align: middle;
+}
+
+.card__date {
+  font-size: 14px;
+  color: gray;
 }

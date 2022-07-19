@@ -23,8 +23,10 @@ def create_contact(request):
 
 def convert_blog2json(blog_posts):
         res = []
-        for post in blog_posts:
-            print(os.path.join(MEDIA_ROOT,str(post.coverImage.name)))
+        for i in range(len(blog_posts)-1, -1, -1):
+            post = blog_posts[i]
+            created_date = post.created_at.date().strftime("%d %b %Y ")
+            #print(os.path.join(MEDIA_ROOT,str(post.coverImage.name)))
             image_data = None
             if post.coverImage.name != "":
                 with open(os.path.join(MEDIA_ROOT, post.coverImage.name), "rb") as image_file:
@@ -35,6 +37,7 @@ def convert_blog2json(blog_posts):
                         'content': post.content,
                         'exceprt': post.exceprtion,
                         'coverImage': image_data,
+                        'createdDate': created_date,
                 }
 
                 #res.append(json.dumps(post_json))
